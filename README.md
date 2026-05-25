@@ -6,7 +6,7 @@ SWE協会（一般社団法人ソフトウェアエンジニアリング協会�
 - LeetCode リスト: https://leetcode.com/list/?selectedList=xt2qzsi5
 - 練習会: SWE協会 Discord
 
-## レビュー駆動フロー（hayashi-ay 流）
+## レビュー駆動フロー
 
 1問1ブランチ・1PR・**`.md` ファイルにコードと思考を混ぜて書く**。PR は merge せず open のまま、各 attempt を commit で積んでレビューコメントを溜める。
 
