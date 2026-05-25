@@ -1,0 +1,18 @@
+# 個人作業ファイル（n10u_org/arai60/ 側で管理）
+log/
+queue.md
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
