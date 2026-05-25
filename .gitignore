@@ -1,6 +1,9 @@
-# 個人作業ファイル（n10u_org/arai60/ 側で管理）
+# 個人作業ファイル
 log/
 queue.md
+
+# Claude Code 設定（symlink は絶対パスでマシン固有）
+.claude/
 
 # Python
 __pycache__/
