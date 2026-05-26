@@ -8,7 +8,7 @@
 
 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
 |---|---|---|---|---|---|---|---|---|
-| 206 | Reverse Linked List | reverse-linked-list | https://leetcode.com/problems/reverse-linked-list/ | --- | - | - | - | untouched |
+| 206 | Reverse Linked List | reverse-linked-list | https://leetcode.com/problems/reverse-linked-list/ | △-- | 2026-05-26 | 47 | 2026-05-27 | learning |
 | 21 | Merge Two Sorted Lists | merge-two-sorted-lists | https://leetcode.com/problems/merge-two-sorted-lists/ | --- | - | - | - | untouched |
 | 141 | Linked List Cycle | linked-list-cycle | https://leetcode.com/problems/linked-list-cycle/ | --- | - | - | - | untouched |
 | 876 | Middle of the Linked List | middle-of-the-linked-list | https://leetcode.com/problems/middle-of-the-linked-list/ | --- | - | - | - | untouched |
