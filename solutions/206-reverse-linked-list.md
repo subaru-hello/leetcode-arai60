@@ -6,7 +6,7 @@ https://leetcode.com/problems/reverse-linked-list/
 
 ---
 
-## attempt 1 (2026-05-26, ?? min, ??)
+## attempt 1 (2026-05-26, 47min, △)
 
 _ここに思考プロセスとコードを書く_
 まず、linked listを定義する方法もわからない。
@@ -30,3 +30,19 @@ def reverseList(self, head):
 _(1回目クリア後に自動収集される)_
 
 ## notes
+
+## attempt 2
+head, curr, prevという概念があると知った。
+
+```python
+    def reverseList(self, head):
+        prev, curr = None, head
+        while curr:
+            next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
+        return prev 
+```
+
+## attempt 3
