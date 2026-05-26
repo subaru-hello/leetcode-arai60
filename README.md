@@ -227,6 +227,6 @@ PR 本文は **LeetCode URL 1行のみで OK**（hayashi-ay 流）。
 |---|---|
 | `/arai60` / `/arai60 today` | 今日のキュー表示・生成 |
 | `/arai60 start <slug>` | 計測開始、`solutions/<#>-<slug>.md` テンプレ作成 |
-| `/arai60 done <slug> <分> <ok\|ng>` | attempt 記録、status 更新、references 自動取得 |
+| `/arai60 done <slug> [<分>] [<ok\|ng>]` | attempt 記録。引数省略で LeetCode AC カウンタ差分から自動判定 |
 | `/arai60 refs <slug>` | 他者コード取得（手動再実行用） |
 | `/arai60 review` | 週次集計 |
