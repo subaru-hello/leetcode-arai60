@@ -1,139 +1,125 @@
 # arai60 進捗トラッカー
 
-全69問の進捗を管理する single source of truth。`/arai60 done` がこのファイルを更新する。
+1kohei1.com/leetcode/ の60問を上から順に解く。`/arai60 done` がこのファイルを更新する。
 
-凡例: attempts は3つの○/×/-。例 `○○-` = 2回連続クリア・残り1回でmaster。`×` で出現するとカウントリセット。
+凡例: attempts は3つの○/△/×/-。例 `○○-` = 2回連続クリア・残り1回でmaster。`×` でカウントリセット、`△` (10分超AC) はカウント進めない。
 
-## LinkedList（連結リスト）
+## LinkedList
 
-| # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
-|---|---|---|---|---|---|---|---|---|
-| 206 | Reverse Linked List | reverse-linked-list | https://leetcode.com/problems/reverse-linked-list/ | △-- | 2026-05-26 | 47 | 2026-05-27 | learning |
-| 21 | Merge Two Sorted Lists | merge-two-sorted-lists | https://leetcode.com/problems/merge-two-sorted-lists/ | --- | - | - | - | untouched |
-| 141 | Linked List Cycle | linked-list-cycle | https://leetcode.com/problems/linked-list-cycle/ | --- | - | - | - | untouched |
-| 876 | Middle of the Linked List | middle-of-the-linked-list | https://leetcode.com/problems/middle-of-the-linked-list/ | --- | - | - | - | untouched |
-| 143 | Reorder List | reorder-list | https://leetcode.com/problems/reorder-list/ | --- | - | - | - | untouched |
+| 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 141 | Linked List Cycle | linked-list-cycle | https://leetcode.com/problems/linked-list-cycle/ | --- | - | - | - | untouched |
+| 2 | 142 | Linked List Cycle II | linked-list-cycle-ii | https://leetcode.com/problems/linked-list-cycle-ii/ | --- | - | - | - | untouched |
+| 3 | 83 | Remove Duplicates from Sorted List | remove-duplicates-from-sorted-list | https://leetcode.com/problems/remove-duplicates-from-sorted-list/ | --- | - | - | - | untouched |
+| 4 | 82 | Remove Duplicates from Sorted List II | remove-duplicates-from-sorted-list-ii | https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/ | --- | - | - | - | untouched |
+| 5 | 2 | Add Two Numbers | add-two-numbers | https://leetcode.com/problems/add-two-numbers/ | --- | - | - | - | untouched |
 
-## Stack（スタック）
+## Stack
 
-| # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
-|---|---|---|---|---|---|---|---|---|
-| 20 | Valid Parentheses | valid-parentheses | https://leetcode.com/problems/valid-parentheses/ | --- | - | - | - | untouched |
-| 155 | Min Stack | min-stack | https://leetcode.com/problems/min-stack/ | --- | - | - | - | untouched |
-| 150 | Evaluate Reverse Polish Notation | evaluate-reverse-polish-notation | https://leetcode.com/problems/evaluate-reverse-polish-notation/ | --- | - | - | - | untouched |
-| 84 | Largest Rectangle in Histogram | largest-rectangle-in-histogram | https://leetcode.com/problems/largest-rectangle-in-histogram/ | --- | - | - | - | untouched |
+| 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
+|---|---|---|---|---|---|---|---|---|---|
+| 6 | 20 | Valid Parentheses | valid-parentheses | https://leetcode.com/problems/valid-parentheses/ | --- | - | - | - | untouched |
+| 7 | 206 | Reverse Linked List | reverse-linked-list | https://leetcode.com/problems/reverse-linked-list/ | △-- | 2026-05-26 | 47 | 2026-05-27 | learning |
 
-## Heap / PriorityQueue（ヒープ）
+## Heap / PriorityQueue
 
-| # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
-|---|---|---|---|---|---|---|---|---|
-| 703 | Kth Largest Element in a Stream | kth-largest-element-in-a-stream | https://leetcode.com/problems/kth-largest-element-in-a-stream/ | --- | - | - | - | untouched |
-| 1046 | Last Stone Weight | last-stone-weight | https://leetcode.com/problems/last-stone-weight/ | --- | - | - | - | untouched |
-| 973 | K Closest Points to Origin | k-closest-points-to-origin | https://leetcode.com/problems/k-closest-points-to-origin/ | --- | - | - | - | untouched |
-| 215 | Kth Largest Element in an Array | kth-largest-element-in-an-array | https://leetcode.com/problems/kth-largest-element-in-an-array/ | --- | - | - | - | untouched |
-| 621 | Task Scheduler | task-scheduler | https://leetcode.com/problems/task-scheduler/ | --- | - | - | - | untouched |
-| 355 | Design Twitter | design-twitter | https://leetcode.com/problems/design-twitter/ | --- | - | - | - | untouched |
+| 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
+|---|---|---|---|---|---|---|---|---|---|
+| 8 | 703 | Kth Largest Element in a Stream | kth-largest-element-in-a-stream | https://leetcode.com/problems/kth-largest-element-in-a-stream/ | --- | - | - | - | untouched |
+| 9 | 347 | Top K Frequent Elements | top-k-frequent-elements | https://leetcode.com/problems/top-k-frequent-elements/ | --- | - | - | - | untouched |
+| 10 | 373 | Find K Pairs with Smallest Sums | find-k-pairs-with-smallest-sums | https://leetcode.com/problems/find-k-pairs-with-smallest-sums/ | --- | - | - | - | untouched |
 
-## HashMap（ハッシュマップ）
+## HashMap
 
-| # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
-|---|---|---|---|---|---|---|---|---|
-| 217 | Contains Duplicate | contains-duplicate | https://leetcode.com/problems/contains-duplicate/ | --- | - | - | - | untouched |
-| 242 | Valid Anagram | valid-anagram | https://leetcode.com/problems/valid-anagram/ | --- | - | - | - | untouched |
-| 1 | Two Sum | two-sum | https://leetcode.com/problems/two-sum/ | --- | - | - | - | untouched |
-| 49 | Group Anagrams | group-anagrams | https://leetcode.com/problems/group-anagrams/ | --- | - | - | - | untouched |
-| 347 | Top K Frequent Elements | top-k-frequent-elements | https://leetcode.com/problems/top-k-frequent-elements/ | --- | - | - | - | untouched |
-| 128 | Longest Consecutive Sequence | longest-consecutive-sequence | https://leetcode.com/problems/longest-consecutive-sequence/ | --- | - | - | - | untouched |
+| 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
+|---|---|---|---|---|---|---|---|---|---|
+| 11 | 1 | Two Sum | two-sum | https://leetcode.com/problems/two-sum/ | --- | - | - | - | untouched |
+| 12 | 49 | Group Anagrams | group-anagrams | https://leetcode.com/problems/group-anagrams/ | --- | - | - | - | untouched |
+| 13 | 349 | Intersection of Two Arrays | intersection-of-two-arrays | https://leetcode.com/problems/intersection-of-two-arrays/ | --- | - | - | - | untouched |
+| 14 | 929 | Unique Email Addresses | unique-email-addresses | https://leetcode.com/problems/unique-email-addresses/ | --- | - | - | - | untouched |
+| 15 | 387 | First Unique Character in a String | first-unique-character-in-a-string | https://leetcode.com/problems/first-unique-character-in-a-string/ | --- | - | - | - | untouched |
+| 16 | 560 | Subarray Sum Equals K | subarray-sum-equals-k | https://leetcode.com/problems/subarray-sum-equals-k/ | --- | - | - | - | untouched |
 
 ## Graph / BFS / DFS
 
-| # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
-|---|---|---|---|---|---|---|---|---|
-| 200 | Number of Islands | number-of-islands | https://leetcode.com/problems/number-of-islands/ | --- | - | - | - | untouched |
-| 133 | Clone Graph | clone-graph | https://leetcode.com/problems/clone-graph/ | --- | - | - | - | untouched |
-| 417 | Pacific Atlantic Water Flow | pacific-atlantic-water-flow | https://leetcode.com/problems/pacific-atlantic-water-flow/ | --- | - | - | - | untouched |
-| 207 | Course Schedule | course-schedule | https://leetcode.com/problems/course-schedule/ | --- | - | - | - | untouched |
-| 323 | Number of Connected Components | number-of-connected-components-in-an-undirected-graph | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/ | --- | - | - | - | untouched |
-| 684 | Redundant Connection | redundant-connection | https://leetcode.com/problems/redundant-connection/ | --- | - | - | - | untouched |
+| 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
+|---|---|---|---|---|---|---|---|---|---|
+| 17 | 200 | Number of Islands | number-of-islands | https://leetcode.com/problems/number-of-islands/ | --- | - | - | - | untouched |
+| 18 | 695 | Max Area of Island | max-area-of-island | https://leetcode.com/problems/max-area-of-island/ | --- | - | - | - | untouched |
+| 19 | 323 | Number of Connected Components in an Undirected Graph | number-of-connected-components-in-an-undirected-graph | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/ | --- | - | - | - | untouched |
+| 20 | 127 | Word Ladder | word-ladder | https://leetcode.com/problems/word-ladder/ | --- | - | - | - | untouched |
 
-## Tree / BT / BST（木構造）
+## Tree / BT / BST
 
-| # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
-|---|---|---|---|---|---|---|---|---|
-| 226 | Invert Binary Tree | invert-binary-tree | https://leetcode.com/problems/invert-binary-tree/ | --- | - | - | - | untouched |
-| 104 | Maximum Depth of Binary Tree | maximum-depth-of-binary-tree | https://leetcode.com/problems/maximum-depth-of-binary-tree/ | --- | - | - | - | untouched |
-| 100 | Same Tree | same-tree | https://leetcode.com/problems/same-tree/ | --- | - | - | - | untouched |
-| 102 | Binary Tree Level Order Traversal | binary-tree-level-order-traversal | https://leetcode.com/problems/binary-tree-level-order-traversal/ | --- | - | - | - | untouched |
-| 572 | Subtree of Another Tree | subtree-of-another-tree | https://leetcode.com/problems/subtree-of-another-tree/ | --- | - | - | - | untouched |
-| 105 | Construct Binary Tree from Preorder and Inorder | construct-binary-tree-from-preorder-and-inorder-traversal | https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ | --- | - | - | - | untouched |
-| 98 | Validate Binary Search Tree | validate-binary-search-tree | https://leetcode.com/problems/validate-binary-search-tree/ | --- | - | - | - | untouched |
-| 230 | Kth Smallest Element in a BST | kth-smallest-element-in-a-bst | https://leetcode.com/problems/kth-smallest-element-in-a-bst/ | --- | - | - | - | untouched |
-| 235 | Lowest Common Ancestor of a BST | lowest-common-ancestor-of-a-binary-search-tree | https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/ | --- | - | - | - | untouched |
-| 124 | Binary Tree Maximum Path Sum | binary-tree-maximum-path-sum | https://leetcode.com/problems/binary-tree-maximum-path-sum/ | --- | - | - | - | untouched |
-| 297 | Serialize and Deserialize Binary Tree | serialize-and-deserialize-binary-tree | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/ | --- | - | - | - | untouched |
+| 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
+|---|---|---|---|---|---|---|---|---|---|
+| 21 | 104 | Maximum Depth of Binary Tree | maximum-depth-of-binary-tree | https://leetcode.com/problems/maximum-depth-of-binary-tree/ | --- | - | - | - | untouched |
+| 22 | 111 | Minimum Depth of Binary Tree | minimum-depth-of-binary-tree | https://leetcode.com/problems/minimum-depth-of-binary-tree/ | --- | - | - | - | untouched |
+| 23 | 617 | Merge Two Binary Trees | merge-two-binary-trees | https://leetcode.com/problems/merge-two-binary-trees/ | --- | - | - | - | untouched |
+| 24 | 108 | Convert Sorted Array to Binary Search Tree | convert-sorted-array-to-binary-search-tree | https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/ | --- | - | - | - | untouched |
+| 25 | 112 | Path Sum | path-sum | https://leetcode.com/problems/path-sum/ | --- | - | - | - | untouched |
+| 26 | 102 | Binary Tree Level Order Traversal | binary-tree-level-order-traversal | https://leetcode.com/problems/binary-tree-level-order-traversal/ | --- | - | - | - | untouched |
+| 27 | 103 | Binary Tree Zigzag Level Order Traversal | binary-tree-zigzag-level-order-traversal | https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ | --- | - | - | - | untouched |
+| 28 | 98 | Validate Binary Search Tree | validate-binary-search-tree | https://leetcode.com/problems/validate-binary-search-tree/ | --- | - | - | - | untouched |
+| 29 | 105 | Construct Binary Tree from Preorder and Inorder | construct-binary-tree-from-preorder-and-inorder-traversal | https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ | --- | - | - | - | untouched |
 
-## Sort（ソート）
+## Dynamic Programming
 
-| # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
-|---|---|---|---|---|---|---|---|---|
-| 912 | Sort an Array | sort-an-array | https://leetcode.com/problems/sort-an-array/ | --- | - | - | - | untouched |
-| 75 | Sort Colors | sort-colors | https://leetcode.com/problems/sort-colors/ | --- | - | - | - | untouched |
-| 56 | Merge Intervals | merge-intervals | https://leetcode.com/problems/merge-intervals/ | --- | - | - | - | untouched |
+| 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
+|---|---|---|---|---|---|---|---|---|---|
+| 30 | 276 | Paint Fence | paint-fence | https://leetcode.com/problems/paint-fence/ | --- | - | - | - | untouched |
+| 31 | 300 | Longest Increasing Subsequence | longest-increasing-subsequence | https://leetcode.com/problems/longest-increasing-subsequence/ | --- | - | - | - | untouched |
+| 32 | 53 | Maximum Subarray | maximum-subarray | https://leetcode.com/problems/maximum-subarray/ | --- | - | - | - | untouched |
+| 33 | 62 | Unique Paths | unique-paths | https://leetcode.com/problems/unique-paths/ | --- | - | - | - | untouched |
+| 34 | 63 | Unique Paths II | unique-paths-ii | https://leetcode.com/problems/unique-paths-ii/ | --- | - | - | - | untouched |
+| 35 | 198 | House Robber | house-robber | https://leetcode.com/problems/house-robber/ | --- | - | - | - | untouched |
+| 36 | 213 | House Robber II | house-robber-ii | https://leetcode.com/problems/house-robber-ii/ | --- | - | - | - | untouched |
+| 37 | 121 | Best Time to Buy and Sell Stock | best-time-to-buy-and-sell-stock | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ | --- | - | - | - | untouched |
+| 38 | 122 | Best Time to Buy and Sell Stock II | best-time-to-buy-and-sell-stock-ii | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ | --- | - | - | - | untouched |
+| 39 | 139 | Word Break | word-break | https://leetcode.com/problems/word-break/ | --- | - | - | - | untouched |
+| 40 | 322 | Coin Change | coin-change | https://leetcode.com/problems/coin-change/ | --- | - | - | - | untouched |
 
-## Dynamic Programming（DP）
+## Binary Search
 
-| # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
-|---|---|---|---|---|---|---|---|---|
-| 70 | Climbing Stairs | climbing-stairs | https://leetcode.com/problems/climbing-stairs/ | --- | - | - | - | untouched |
-| 198 | House Robber | house-robber | https://leetcode.com/problems/house-robber/ | --- | - | - | - | untouched |
-| 213 | House Robber II | house-robber-ii | https://leetcode.com/problems/house-robber-ii/ | --- | - | - | - | untouched |
-| 91 | Decode Ways | decode-ways | https://leetcode.com/problems/decode-ways/ | --- | - | - | - | untouched |
-| 322 | Coin Change | coin-change | https://leetcode.com/problems/coin-change/ | --- | - | - | - | untouched |
-| 152 | Maximum Product Subarray | maximum-product-subarray | https://leetcode.com/problems/maximum-product-subarray/ | --- | - | - | - | untouched |
-| 139 | Word Break | word-break | https://leetcode.com/problems/word-break/ | --- | - | - | - | untouched |
-| 300 | Longest Increasing Subsequence | longest-increasing-subsequence | https://leetcode.com/problems/longest-increasing-subsequence/ | --- | - | - | - | untouched |
-| 416 | Partition Equal Subset Sum | partition-equal-subset-sum | https://leetcode.com/problems/partition-equal-subset-sum/ | --- | - | - | - | untouched |
+| 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
+|---|---|---|---|---|---|---|---|---|---|
+| 41 | 35 | Search Insert Position | search-insert-position | https://leetcode.com/problems/search-insert-position/ | --- | - | - | - | untouched |
+| 42 | 153 | Find Minimum in Rotated Sorted Array | find-minimum-in-rotated-sorted-array | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ | --- | - | - | - | untouched |
+| 43 | 33 | Search in Rotated Sorted Array | search-in-rotated-sorted-array | https://leetcode.com/problems/search-in-rotated-sorted-array/ | --- | - | - | - | untouched |
+| 44 | 1011 | Capacity To Ship Packages Within D Days | capacity-to-ship-packages-within-d-days | https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/ | --- | - | - | - | untouched |
 
-## Binary Search（二分探索）
+## Recursion
 
-| # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
-|---|---|---|---|---|---|---|---|---|
-| 153 | Find Minimum in Rotated Sorted Array | find-minimum-in-rotated-sorted-array | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ | --- | - | - | - | untouched |
-| 33 | Search in Rotated Sorted Array | search-in-rotated-sorted-array | https://leetcode.com/problems/search-in-rotated-sorted-array/ | --- | - | - | - | untouched |
-| 4 | Median of Two Sorted Arrays | median-of-two-sorted-arrays | https://leetcode.com/problems/median-of-two-sorted-arrays/ | --- | - | - | - | untouched |
-
-## Recursion（再帰）
-
-| # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
-|---|---|---|---|---|---|---|---|---|
-| 78 | Subsets | subsets | https://leetcode.com/problems/subsets/ | --- | - | - | - | untouched |
-| 39 | Combination Sum | combination-sum | https://leetcode.com/problems/combination-sum/ | --- | - | - | - | untouched |
-| 46 | Permutations | permutations | https://leetcode.com/problems/permutations/ | --- | - | - | - | untouched |
-| 131 | Palindrome Partitioning | palindrome-partitioning | https://leetcode.com/problems/palindrome-partitioning/ | --- | - | - | - | untouched |
+| 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
+|---|---|---|---|---|---|---|---|---|---|
+| 45 | 50 | Pow(x, n) | powx-n | https://leetcode.com/problems/powx-n/ | --- | - | - | - | untouched |
+| 46 | 779 | K-th Symbol in Grammar | k-th-symbol-in-grammar | https://leetcode.com/problems/k-th-symbol-in-grammar/ | --- | - | - | - | untouched |
+| 47 | 776 | Split BST | split-bst | https://leetcode.com/problems/split-bst/ | --- | - | - | - | untouched |
 
 ## Sliding Window
 
-| # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
-|---|---|---|---|---|---|---|---|---|
-| 121 | Best Time to Buy and Sell Stock | best-time-to-buy-and-sell-stock | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ | --- | - | - | - | untouched |
-| 3 | Longest Substring Without Repeating Characters | longest-substring-without-repeating-characters | https://leetcode.com/problems/longest-substring-without-repeating-characters/ | --- | - | - | - | untouched |
-| 424 | Longest Repeating Character Replacement | longest-repeating-character-replacement | https://leetcode.com/problems/longest-repeating-character-replacement/ | --- | - | - | - | untouched |
-| 76 | Minimum Window Substring | minimum-window-substring | https://leetcode.com/problems/minimum-window-substring/ | --- | - | - | - | untouched |
-
-## Two Pointers（二ポインタ）
-
-| # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
-|---|---|---|---|---|---|---|---|---|
-| 125 | Valid Palindrome | valid-palindrome | https://leetcode.com/problems/valid-palindrome/ | --- | - | - | - | untouched |
-| 167 | Two Sum II | two-sum-ii-input-array-is-sorted | https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ | --- | - | - | - | untouched |
-| 15 | 3Sum | 3sum | https://leetcode.com/problems/3sum/ | --- | - | - | - | untouched |
-| 11 | Container With Most Water | container-with-most-water | https://leetcode.com/problems/container-with-most-water/ | --- | - | - | - | untouched |
-| 42 | Trapping Rain Water | trapping-rain-water | https://leetcode.com/problems/trapping-rain-water/ | --- | - | - | - | untouched |
+| 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
+|---|---|---|---|---|---|---|---|---|---|
+| 48 | 3 | Longest Substring Without Repeating Characters | longest-substring-without-repeating-characters | https://leetcode.com/problems/longest-substring-without-repeating-characters/ | --- | - | - | - | untouched |
+| 49 | 209 | Minimum Size Subarray Sum | minimum-size-subarray-sum | https://leetcode.com/problems/minimum-size-subarray-sum/ | --- | - | - | - | untouched |
 
 ## Greedy + Backtracking
 
-| # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
-|---|---|---|---|---|---|---|---|---|
-| 53 | Maximum Subarray | maximum-subarray | https://leetcode.com/problems/maximum-subarray/ | --- | - | - | - | untouched |
-| 55 | Jump Game | jump-game | https://leetcode.com/problems/jump-game/ | --- | - | - | - | untouched |
-| 45 | Jump Game II | jump-game-ii | https://leetcode.com/problems/jump-game-ii/ | --- | - | - | - | untouched |
+| 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
+|---|---|---|---|---|---|---|---|---|---|
+| 50 | 46 | Permutations | permutations | https://leetcode.com/problems/permutations/ | --- | - | - | - | untouched |
+| 51 | 78 | Subsets | subsets | https://leetcode.com/problems/subsets/ | --- | - | - | - | untouched |
+| 52 | 39 | Combination Sum | combination-sum | https://leetcode.com/problems/combination-sum/ | --- | - | - | - | untouched |
+| 53 | 22 | Generate Parentheses | generate-parentheses | https://leetcode.com/problems/generate-parentheses/ | --- | - | - | - | untouched |
+
+## Other
+
+| 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
+|---|---|---|---|---|---|---|---|---|---|
+| 54 | 283 | Move Zeroes | move-zeroes | https://leetcode.com/problems/move-zeroes/ | --- | - | - | - | untouched |
+| 55 | 252 | Meeting Rooms | meeting-rooms | https://leetcode.com/problems/meeting-rooms/ | --- | - | - | - | untouched |
+| 56 | 253 | Meeting Rooms II | meeting-rooms-ii | https://leetcode.com/problems/meeting-rooms-ii/ | --- | - | - | - | untouched |
+| 57 | 392 | Is Subsequence | is-subsequence | https://leetcode.com/problems/is-subsequence/ | --- | - | - | - | untouched |
+| 58 | 31 | Next Permutation | next-permutation | https://leetcode.com/problems/next-permutation/ | --- | - | - | - | untouched |
+| 59 | 8 | String to Integer (atoi) | string-to-integer-atoi | https://leetcode.com/problems/string-to-integer-atoi/ | --- | - | - | - | untouched |
+| 60 | 6 | ZigZag Conversion | zigzag-conversion | https://leetcode.com/problems/zigzag-conversion/ | --- | - | - | - | untouched |
