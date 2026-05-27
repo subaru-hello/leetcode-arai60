@@ -46,3 +46,21 @@ head, curr, prevという概念があると知った。
 ```
 
 ## attempt 3
+意識したこと
+- 組み込み関数と名前衝突が起きる可能性も考慮に入れて変数・関数定義をする。
+- １行１代入文にする。
+１行１代入文にすると、少し負荷が軽減された感覚がある。なんか、脳に一時的に置いておく情報を少なくできた感じ。
+今回における変数宣言には、参照先を一旦退避する目的と、値を書き換える目的があるかも。
+
+
+```python
+    def reverseList(self, head):
+        prev = None
+        curr = head
+        while curr:
+            nxt = curr.next
+            curr.next = prev
+            prev = curr
+            curr = nxt
+        return prev
+```
