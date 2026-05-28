@@ -41,17 +41,16 @@ class Solution(object):
 - なんでsetなのかは後で調べる
 
 ```python
-
 class Solution(object):
-    def hasCycle(self, head: Optional[ListNode]) → bool:
-        visited = new set()
-        node = head
-        while node:
-          if node in visited:
-            return True
-          visited.add(node)
-          node = node.next
-        return False
+    def hasCycle(self, head):
+      visited = set()
+      node = head
+      while node:
+        if node in visited:
+          return True
+        visited.add(node)
+        node = node.next
+      return False
 ```
 
 
