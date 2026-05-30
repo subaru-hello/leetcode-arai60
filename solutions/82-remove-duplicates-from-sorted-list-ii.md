@@ -12,19 +12,19 @@ https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
 ```python
 
 class Solution(object):
-    def deleteDuplicates(self, head):
-        dummy = ListNode(0, head)
-        prev = dummy
-        curr = head
-        while curr and curr.next:
-            if curr.val == curr.next.val:
-                while curr.next is not None and curr.val == curr.next.val:
-                    curr = curr.next
-                prev.next = curr.next
-            else:
-                prev = prev.next
+  def deleteDuplicates(self, head):
+    sentinel = ListNode(0, head)
+    prev = sentinel
+    curr = head
+    while curr and curr.next:
+        if curr.val == curr.next.val:
+          while curr.next and curr.val == curr.next.val:
             curr = curr.next
-        return dummy.next
+            prev.next = curr.next
+        else:
+            prev = prev.next
+        curr = curr.next
+    return sentinel.next
 
 ```
 
