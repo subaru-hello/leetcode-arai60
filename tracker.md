@@ -18,7 +18,7 @@
 
 | 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
 |---|---|---|---|---|---|---|---|---|---|
-| 6 | 20 | Valid Parentheses | valid-parentheses | https://leetcode.com/problems/valid-parentheses/ | --- | - | - | - | untouched |
+| 6 | 20 | Valid Parentheses | valid-parentheses | https://leetcode.com/problems/valid-parentheses/ | △-- | 2026-05-31 | 110 | 2026-06-01 | learning |
 | 7 | 206 | Reverse Linked List | reverse-linked-list | https://leetcode.com/problems/reverse-linked-list/ | △-- | 2026-05-26 | 47 | 2026-05-27 | learning |
 
 ## Heap / PriorityQueue
