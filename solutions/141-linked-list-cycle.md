@@ -57,6 +57,35 @@ class Solution(object):
 ### Step 3
 レビューを踏まえて整形する。その後、10分以内にエラーを出さずに書く
 
+```python
+class Solution(object):
+    def hasCycle(self, head):
+      visited = set()
+      node = head
+
+      while node is not None and node.next is not None:
+        if node in visited:
+            return True
+        
+        visited.add(node)
+        node = node.next
+      return False
+```
+
+```python
+class Solution(object):
+    def hasCycle(self, head):
+      fast = head
+      slow = head
+
+      while fast is not None and fast.next is not None:
+        fast = fast.next.next
+        slow = slow.next
+        if fast == slow:
+            return True
+      return False
+```
+
 ---
 
 ## attempt 1 / Step 1 (2026-05-28, 47min, △)
