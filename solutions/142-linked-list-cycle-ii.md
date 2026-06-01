@@ -73,6 +73,33 @@ class Solution(object):
 
 ### Step 3
 レビューを踏まえて整形する。その後、10分以内にエラーを出さずに書く
+- while文がネストして書かれている。二つの役割が違うから、内側のwhileは別関数に切り出したほうがレビュワーの負荷を軽減できる
+- isやis not がオブジェクト同士の比較で、==や!=が値の比較
+- 問題をよく読む
+
+```python
+
+class Solution(object):
+  def detectCycle(self, head):
+    fast = head
+    slow = head
+
+    while fast is not None and fast.next is not None:
+        fast = fast.next.next
+        slow = slow.next
+
+        if slow is fast:
+            return self.findCycleStartedNode(head, slow)
+    return None
+
+  def findCycleStartedNode(self, head, cycleStartedNode):
+    node = head
+
+    while node is not cycleStartedNode:
+        node = node.next
+        cycleStartedNode = cycleStartedNode.next
+    return cycleStartedNode
+```
 
 ---
 
