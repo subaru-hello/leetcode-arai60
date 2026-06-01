@@ -71,6 +71,26 @@ class Solution(object):
 
 ### Step 3
 レビューを踏まえて整形する。その後、10分以内にエラーを出さずに書く
+- pythonのローカル変数は一般的にsnake case
+
+```python
+class Solution(object):
+    def deleteDuplicates(self, head):
+        if head is None:
+            return None
+        
+        previous_node = head
+        current_node = head
+
+        while current_node is not None:
+            if previous_node.val != current_node.val:
+                previous_node.next = current_node
+                previous_node = current_node
+            current_node = current_node.next
+        previous_node.next = None
+        return head
+
+```
 
 ---
 
