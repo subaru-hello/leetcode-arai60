@@ -35,7 +35,10 @@ class KthLargest:
 > The interesting property of a min-heap is that its smallest element is always the root, heap[0].
 - min heapの先頭にはheap内の最小の値を取得できるという特性を利用して、heapに格納する値の個数上限を決めると良さそうということがわかった。上限が決まっていて、先頭に小さい値が来る、言い換えると、昇順に並んでいるのであれば、heapの容量をkにして、先頭を取得すれば、全体の上位k番目を取得できるということになる。と理解した。
 - 他の方が書いたコードも読んだが、自分のコードが比較的コード量が少なく、条件分岐の数が少ないから認知負荷が低い。
-- 高さを保つのが大事らしい  
+- 高さを保つのが大事らしい
+- Pythonのheapにはpeakを取るメソッドがない。なぜなら、heap[0]で最小値を取れるようになっているから。なぜ(https://stackoverflow.com/questions/1750991/peeking-in-a-heap-in-python)
+- Pythonのheapは、Classからインスタンス化したオブジェクトではなくて、listデータ構造になっているから、わざわざpeakを作っていないとclaudeは言っている。
+- Pythonのheapは親が必ず子より小さくなる二分木だから、ルートを取る時に[0]でアクセスできるため、O(1)を実現することができる。
 
 ```python3
 import heapq
