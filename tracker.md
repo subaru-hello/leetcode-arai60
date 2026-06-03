@@ -26,7 +26,7 @@
 | 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
 |---|---|---|---|---|---|---|---|---|---|
 | 8 | 703 | Kth Largest Element in a Stream | kth-largest-element-in-a-stream | https://leetcode.com/problems/kth-largest-element-in-a-stream/ | △-- | 2026-06-02 | 60 | 2026-06-03 | learning |
-| 9 | 347 | Top K Frequent Elements | top-k-frequent-elements | https://leetcode.com/problems/top-k-frequent-elements/ | --- | - | - | - | untouched |
+| 9 | 347 | Top K Frequent Elements | top-k-frequent-elements | https://leetcode.com/problems/top-k-frequent-elements/ | △-- | 2026-06-03 | 109 | 2026-06-04 | learning |
 | 10 | 373 | Find K Pairs with Smallest Sums | find-k-pairs-with-smallest-sums | https://leetcode.com/problems/find-k-pairs-with-smallest-sums/ | --- | - | - | - | untouched |
 
 ## HashMap
