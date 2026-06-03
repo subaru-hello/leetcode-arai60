@@ -2,8 +2,6 @@
 log/
 queue.md
 
-# Claude Code 設定（symlink は絶対パスでマシン固有）
-.claude/
 
 # Python
 __pycache__/
