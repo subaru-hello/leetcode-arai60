@@ -36,7 +36,7 @@
 | 11 | 1 | Two Sum | two-sum | https://leetcode.com/problems/two-sum/ | △-- | 2026-06-05 | 112 | 2026-06-06 | learning |
 | 12 | 49 | Group Anagrams | group-anagrams | https://leetcode.com/problems/group-anagrams/ | △-- | 2026-06-07 | 60 | 2026-06-08 | learning |
 | 13 | 349 | Intersection of Two Arrays | intersection-of-two-arrays | https://leetcode.com/problems/intersection-of-two-arrays/ | △-- | 2026-06-09 | 179 | 2026-06-10 | learning |
-| 14 | 929 | Unique Email Addresses | unique-email-addresses | https://leetcode.com/problems/unique-email-addresses/ | --- | - | - | - | untouched |
+| 14 | 929 | Unique Email Addresses | unique-email-addresses | https://leetcode.com/problems/unique-email-addresses/ | △-- | 2026-06-11 | 60 | 2026-06-12 | learning |
 | 15 | 387 | First Unique Character in a String | first-unique-character-in-a-string | https://leetcode.com/problems/first-unique-character-in-a-string/ | --- | - | - | - | untouched |
 | 16 | 560 | Subarray Sum Equals K | subarray-sum-equals-k | https://leetcode.com/problems/subarray-sum-equals-k/ | --- | - | - | - | untouched |
 
