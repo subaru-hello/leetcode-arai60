@@ -8,7 +8,7 @@
 
 | 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 141 | Linked List Cycle | linked-list-cycle | https://leetcode.com/problems/linked-list-cycle/ | △-- | 2026-05-28 | 47 | 2026-05-29 | learning |
+| 1 | 141 | Linked List Cycle | linked-list-cycle | https://leetcode.com/problems/linked-list-cycle/ | ○-- | 2026-07-01 | ≤10 | 2026-07-02 | learning |
 | 2 | 142 | Linked List Cycle II | linked-list-cycle-ii | https://leetcode.com/problems/linked-list-cycle-ii/ | △-- | 2026-05-28 | 51 | 2026-05-29 | learning |
 | 3 | 83 | Remove Duplicates from Sorted List | remove-duplicates-from-sorted-list | https://leetcode.com/problems/remove-duplicates-from-sorted-list/ | △-- | 2026-05-29 | 79 | 2026-05-30 | learning |
 | 4 | 82 | Remove Duplicates from Sorted List II | remove-duplicates-from-sorted-list-ii | https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/ | △-- | 2026-05-30 | 174 | 2026-05-31 | learning |
