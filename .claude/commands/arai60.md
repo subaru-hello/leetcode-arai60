@@ -11,9 +11,10 @@ arai60 ルーティンを実行してください。SWE協会推奨フロー（�
 ## 重要: レビュー駆動フロー（hayashi-ay 流）
 
 - `.py` ではなく **`.md`** にコード(```python ブロック)と思考を混ぜて書く
-- 1問1ブランチ: `feat/<#>-<slug>`
+- 1問1ブランチ: `<#>-<slug>`（例: `141-linked-list-cycle`）。`feat/`や`claude/`などのプレフィックスは付けない。
 - 1問1PR、**merge しない**（open のままレビューコメント保存場所として使う）
 - attempt ごとに commit して push、レビューが付くと次の attempt に反映
+- **執筆スタイル**: `solutions/<#>-<slug>.md` の「疑問・気づき」欄は Q&A 形式にしない。自分の言葉でつらつら書いた一人称の走り書きにする。「参考」セクションにも GitHub アクセス範囲などのメタ情報・注釈は書かない（コード本体と気づきだけを書く）。
 
 ## レビュー指針（SWE協会「参加マニュアル」「典型コメント集」より抽出）
 
@@ -92,7 +93,7 @@ arai60 ルーティンを実行してください。SWE協会推奨フロー（�
    - URL: <url>
    - カテゴリ: <category>
    - ファイル: solutions/<#>-<slug>.md
-   - ブランチ: feat/<#>-<slug>
+   - ブランチ: <#>-<slug>
    - 目標: 10分以内、ノーエラー
 
    ## 手順
@@ -101,9 +102,9 @@ arai60 ルーティンを実行してください。SWE協会推奨フロー（�
    ```
    - 復習は出さない（毎日 untouched から上から順に1問だけ）。
 5. ユーザーに queue.md の内容を表示。
-6. **新規問題のブランチに自動切り替え**: `today` で選定した新規問題用に `feat/<#>-<slug>` ブランチを作成・切り替える。未コミット変更があれば stash を促す。
+6. **新規問題のブランチに自動切り替え**: `today` で選定した新規問題用に `<#>-<slug>` ブランチを作成・切り替える。未コミット変更があれば stash を促す。
    ```bash
-   git checkout main && git checkout -b feat/<#>-<slug>
+   git checkout main && git checkout -b <#>-<slug>
    ```
 
 ## 共通設定
@@ -157,11 +158,11 @@ arai60 ルーティンを実行してください。SWE協会推奨フロー（�
    ```
    - **attempt 表記は使わない**。`## Step 1`, `## Step 2`, `## Step 3` のみ。
    - PR description には別途 `今回解いた問題 / 次に解く問題 / 言語` + 学習方法 Step 1/2/3 を入れる。
-4. **ブランチ自動切り替え**: `git branch --show-current` で `feat/<#>-<slug>` 上にいなければ自動で切り替える:
+4. **ブランチ自動切り替え**: `git branch --show-current` で `<#>-<slug>` 上にいなければ自動で切り替える:
    ```bash
-   git checkout main && git checkout -b feat/<#>-<slug>
+   git checkout main && git checkout -b <#>-<slug>
    ```
-   - 既存ブランチが存在する場合は `git checkout feat/<#>-<slug>`。
+   - 既存ブランチが存在する場合は `git checkout <#>-<slug>`。
    - 未コミット変更があると失敗するので、その場合のみユーザーに stash/commit を促す。
 4.5. **参考 PR の自動添付**: `gh search repos "arai60" --limit 30` で arai60 系リポを列挙し、各リポの PR 一覧から `<#>` または `<問題名>` にマッチする PR を検索する。見つかった PR URL を `solutions/<#>-<slug>.md` の **`## 参考` セクション**に **5件** 追記する。
    - 検索クエリ例: `gh pr list --repo <owner>/<repo> --json title,url --limit 200 | jq '.[] | select(.title | test("<#>[_. ]|<問題名>";"i"))'`
@@ -202,7 +203,7 @@ arai60 ルーティンを実行してください。SWE協会推奨フロー（�
 7. **1回目クリア時（attempts が `○--` になった瞬間）は自動で `refs <slug>` を呼ぶ**。
 8. **commit/push は提案も実行もしない（ユーザーが手動でやる）**。ファイル更新まで完了したら結果サマリだけ表示する。
    - **重要**: ブランチ切替時に未コミットファイルがあっても、勝手に `git commit && git push` してはいけない。必ずユーザーに選択肢（commit / stash / discard）を示して指示を待つ。
-   - 運用方針: `tracker.md` は main 直 push、`solutions/<#>-<slug>.md` は `feat/<#>-<slug>` ブランチで PR（**merge しない、open のまま運用**）。
+   - 運用方針: `tracker.md` は main 直 push、`solutions/<#>-<slug>.md` は `<#>-<slug>` ブランチで PR（**merge しない、open のまま運用**）。
    - 1回目クリア後の **PR description テンプレ**（ユーザーが `gh pr create` するときに使う形式）:
      ```
      今回解いた問題：<#>. <問題名>
