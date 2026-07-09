@@ -17,3 +17,6 @@ venv/
 .idea/
 .DS_Store
 *.swp
+
+# ローカル作業（テストハーネス等）
+local/
