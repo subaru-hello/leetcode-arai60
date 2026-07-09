@@ -158,3 +158,43 @@ class Solution:
                     best = max(best, dfs(r, c))
         return best
 ```
+
+## Step 3 (2026-07-09, ≤10 min, ok) — レビュー反映
+
+### 反映するレビュー（4点）
+- [x] **L29 命名**: `rows`/`cols` → `num_rows`/`num_cols`（`num_rows` = number_of_rows で「行数」のニュアンス）
+- [x] **L36 入力の非破壊**: `grid[row][col] = 0` をやめ、`visited` set で訪問管理。実行後も grid は不変（検証済み）
+- [x] **L71 累積変数の命名**: `best`/`ans` → `max_area`
+- [x] **L148 境界チェック**: 範囲チェックを数直線順（`0 <= row < num_rows`）に。visited/海チェックは別 return に分離
+
+### 3-B: 気づき
+- grid を破壊しない代わりに `visited` が必須になった。破壊版は「沈める」ことが訪問マークを兼ねていたが、非破壊版はマーキングを `visited` に外出しするので責務が分かれて読みやすい。
+- 早期 return は `return`（None）ではなく `return 0`。面積を足し算で集める関数なので「何も無い＝0」を返す必要がある。
+
+```python
+class Solution:
+    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+        num_rows = len(grid)
+        num_cols = len(grid[0])
+
+        visited = set()
+        def dfs(row, col):
+            if row < 0 or row >= num_rows or col < 0 or col >= num_cols:
+                return 0
+        
+            if grid[row][col] == 0 or (row, col) in visited:
+                return 0
+        
+            visited.add((row, col))
+            return (1 + dfs(row + 1, col) + dfs(row - 1, col) + dfs(row, col + 1) + dfs(row, col - 1))
+
+        max_area = 0
+        for row in range(num_rows):
+            for col in range(num_cols):
+                if grid[row][col] == 1:
+                    max_area = max(max_area, dfs(row, col))
+        
+        return max_area
+```
+
+
