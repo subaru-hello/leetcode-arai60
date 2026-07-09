@@ -45,7 +45,7 @@
 | 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
 |---|---|---|---|---|---|---|---|---|---|
 | 17 | 200 | Number of Islands | number-of-islands | https://leetcode.com/problems/number-of-islands/ | △-- | 2026-06-21 | 60 | 2026-06-22 | learning |
-| 18 | 695 | Max Area of Island | max-area-of-island | https://leetcode.com/problems/max-area-of-island/ | --- | - | - | - | untouched |
+| 18 | 695 | Max Area of Island | max-area-of-island | https://leetcode.com/problems/max-area-of-island/ | ○-- | 2026-07-09 | 10 | 2026-07-10 | learning |
 | 19 | 323 | Number of Connected Components in an Undirected Graph | number-of-connected-components-in-an-undirected-graph | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/ | ○-- | 2026-07-09 | 10 | 2026-07-10 | learning |
 | 20 | 127 | Word Ladder | word-ladder | https://leetcode.com/problems/word-ladder/ | --- | - | - | - | untouched |
 
