@@ -53,7 +53,7 @@
 
 | 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
 |---|---|---|---|---|---|---|---|---|---|
-| 21 | 104 | Maximum Depth of Binary Tree | maximum-depth-of-binary-tree | https://leetcode.com/problems/maximum-depth-of-binary-tree/ | --- | - | - | - | untouched |
+| 21 | 104 | Maximum Depth of Binary Tree | maximum-depth-of-binary-tree | https://leetcode.com/problems/maximum-depth-of-binary-tree/ | ○-- | 2026-07-10 | 10 | 2026-07-11 | learning |
 | 22 | 111 | Minimum Depth of Binary Tree | minimum-depth-of-binary-tree | https://leetcode.com/problems/minimum-depth-of-binary-tree/ | --- | - | - | - | untouched |
 | 23 | 617 | Merge Two Binary Trees | merge-two-binary-trees | https://leetcode.com/problems/merge-two-binary-trees/ | --- | - | - | - | untouched |
 | 24 | 108 | Convert Sorted Array to Binary Search Tree | convert-sorted-array-to-binary-search-tree | https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/ | --- | - | - | - | untouched |
