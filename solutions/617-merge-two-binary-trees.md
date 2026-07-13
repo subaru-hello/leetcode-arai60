@@ -6,7 +6,7 @@ https://leetcode.com/problems/merge-two-binary-trees/
 - **Step 2**: 自分なりに整形 → 他人のコードを読んで再整形 → PR でレビュー依頼
 - **Step 3**: レビュー反映 → 10分以内にエラーなく書く
 
-## Step 1 (2026-07-12, ?? min, ??)
+## Step 1 (2026-07-12, 10min, ok)
 
 ### 1-A: 自力で考えたこと
 - データ構造案: Binary Tree

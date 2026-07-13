@@ -55,7 +55,7 @@
 |---|---|---|---|---|---|---|---|---|---|
 | 21 | 104 | Maximum Depth of Binary Tree | maximum-depth-of-binary-tree | https://leetcode.com/problems/maximum-depth-of-binary-tree/ | ○-- | 2026-07-10 | 10 | 2026-07-11 | learning |
 | 22 | 111 | Minimum Depth of Binary Tree | minimum-depth-of-binary-tree | https://leetcode.com/problems/minimum-depth-of-binary-tree/ | ○-- | 2026-07-11 | 10 | 2026-07-12 | learning |
-| 23 | 617 | Merge Two Binary Trees | merge-two-binary-trees | https://leetcode.com/problems/merge-two-binary-trees/ | --- | - | - | - | untouched |
+| 23 | 617 | Merge Two Binary Trees | merge-two-binary-trees | https://leetcode.com/problems/merge-two-binary-trees/ | ○-- | 2026-07-12 | 10 | 2026-07-13 | learning |
 | 24 | 108 | Convert Sorted Array to Binary Search Tree | convert-sorted-array-to-binary-search-tree | https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/ | --- | - | - | - | untouched |
 | 25 | 112 | Path Sum | path-sum | https://leetcode.com/problems/path-sum/ | --- | - | - | - | untouched |
 | 26 | 102 | Binary Tree Level Order Traversal | binary-tree-level-order-traversal | https://leetcode.com/problems/binary-tree-level-order-traversal/ | --- | - | - | - | untouched |

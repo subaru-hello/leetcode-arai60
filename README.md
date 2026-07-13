@@ -230,3 +230,5 @@ PR 本文は **LeetCode URL 1行のみで OK**（hayashi-ay 流）。
 | `/arai60 done <slug> [<分>] [<ok\|ng>]` | attempt 記録。引数省略で LeetCode AC カウンタ差分から自動判定 |
 | `/arai60 refs <slug>` | 他者コード取得（手動再実行用） |
 | `/arai60 review` | 週次集計 |
+
+cd ~/Dev/octobyte/public && afplay -v 3 e2i_2.mp3 && afplay -v 3 e2c4_5.mp3
