@@ -61,7 +61,7 @@
 | 26 | 102 | Binary Tree Level Order Traversal | binary-tree-level-order-traversal | https://leetcode.com/problems/binary-tree-level-order-traversal/ | △-- | 2026-07-15 | 15 | 2026-07-16 | learning |
 | 27 | 103 | Binary Tree Zigzag Level Order Traversal | binary-tree-zigzag-level-order-traversal | https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ | ○-- | 2026-07-16 | 10 | 2026-07-17 | learning |
 | 28 | 98 | Validate Binary Search Tree | validate-binary-search-tree | https://leetcode.com/problems/validate-binary-search-tree/ | ○-- | 2026-07-18 | 10 | 2026-07-19 | learning |
-| 29 | 105 | Construct Binary Tree from Preorder and Inorder | construct-binary-tree-from-preorder-and-inorder-traversal | https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ | --- | - | - | - | untouched |
+| 29 | 105 | Construct Binary Tree from Preorder and Inorder | construct-binary-tree-from-preorder-and-inorder-traversal | https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ | ○-- | 2026-07-20 | 10 | 2026-07-21 | learning |
 
 ## Dynamic Programming
 
