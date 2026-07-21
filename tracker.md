@@ -67,7 +67,7 @@
 
 | 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
 |---|---|---|---|---|---|---|---|---|---|
-| 30 | 276 | Paint Fence | paint-fence | https://leetcode.com/problems/paint-fence/ | --- | - | - | - | untouched |
+| 30 | 276 | Paint Fence | paint-fence | https://leetcode.com/problems/paint-fence/ | ○-- | 2026-07-20 | 10 | 2026-07-21 | learning |
 | 31 | 300 | Longest Increasing Subsequence | longest-increasing-subsequence | https://leetcode.com/problems/longest-increasing-subsequence/ | --- | - | - | - | untouched |
 | 32 | 53 | Maximum Subarray | maximum-subarray | https://leetcode.com/problems/maximum-subarray/ | --- | - | - | - | untouched |
 | 33 | 62 | Unique Paths | unique-paths | https://leetcode.com/problems/unique-paths/ | --- | - | - | - | untouched |
