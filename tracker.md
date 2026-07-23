@@ -69,7 +69,7 @@
 |---|---|---|---|---|---|---|---|---|---|
 | 30 | 276 | Paint Fence | paint-fence | https://leetcode.com/problems/paint-fence/ | ○-- | 2026-07-20 | 10 | 2026-07-21 | learning |
 | 31 | 300 | Longest Increasing Subsequence | longest-increasing-subsequence | https://leetcode.com/problems/longest-increasing-subsequence/ | ○-- | 2026-07-22 | 10 | 2026-07-23 | learning |
-| 32 | 53 | Maximum Subarray | maximum-subarray | https://leetcode.com/problems/maximum-subarray/ | --- | - | - | - | untouched |
+| 32 | 53 | Maximum Subarray | maximum-subarray | https://leetcode.com/problems/maximum-subarray/ | ○-- | 2026-07-23 | 10 | 2026-07-24 | learning |
 | 33 | 62 | Unique Paths | unique-paths | https://leetcode.com/problems/unique-paths/ | --- | - | - | - | untouched |
 | 34 | 63 | Unique Paths II | unique-paths-ii | https://leetcode.com/problems/unique-paths-ii/ | --- | - | - | - | untouched |
 | 35 | 198 | House Robber | house-robber | https://leetcode.com/problems/house-robber/ | --- | - | - | - | untouched |
