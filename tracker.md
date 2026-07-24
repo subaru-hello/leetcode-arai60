@@ -72,7 +72,7 @@
 | 32 | 53 | Maximum Subarray | maximum-subarray | https://leetcode.com/problems/maximum-subarray/ | ○-- | 2026-07-23 | 10 | 2026-07-24 | learning |
 | 33 | 62 | Unique Paths | unique-paths | https://leetcode.com/problems/unique-paths/ | ○-- | 2026-07-23 | 10 | 2026-07-24 | learning |
 | 34 | 63 | Unique Paths II | unique-paths-ii | https://leetcode.com/problems/unique-paths-ii/ | ○-- | 2026-07-24 | 10 | 2026-07-25 | learning |
-| 35 | 198 | House Robber | house-robber | https://leetcode.com/problems/house-robber/ | --- | - | - | - | untouched |
+| 35 | 198 | House Robber | house-robber | https://leetcode.com/problems/house-robber/ | ○-- | 2026-07-24 | 10 | 2026-07-25 | learning |
 | 36 | 213 | House Robber II | house-robber-ii | https://leetcode.com/problems/house-robber-ii/ | --- | - | - | - | untouched |
 | 37 | 121 | Best Time to Buy and Sell Stock | best-time-to-buy-and-sell-stock | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ | --- | - | - | - | untouched |
 | 38 | 122 | Best Time to Buy and Sell Stock II | best-time-to-buy-and-sell-stock-ii | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ | --- | - | - | - | untouched |
