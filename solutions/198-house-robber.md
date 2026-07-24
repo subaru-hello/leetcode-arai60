@@ -28,31 +28,13 @@ class Solution:
 
 ```
 
-## Step2
-変数名をtwo_before_maxとone_before_maxにした。数字が先の方が読みやすいと思った。意味的には、up_toを入れた方が正しいとは思う。
-
-```python
-class Solution:
-    def rob(self, nums: List[int]) -> int:
-        two_before_max = 0
-        one_before_max = 0
-
-        for num in nums:
-            current_max = max(one_before_max, two_before_max + num)
-            two_before_max = one_before_max
-            one_before_max = current_max
-        
-        return one_before_max
-
-```
-
-
-
 ## Step 2 (2026-07-24)
 
 ### 考えたこと
 - 変数名を `two_before_max`/`one_before_max` に変更して意味を明確化
 - `current_max` の一時変数で同時更新の意図を読みやすく
+
+変数名をtwo_before_maxとone_before_maxにした。数字が先の方が読みやすいと思った。意味的には、up_toを入れた方が正しいとは思う。
 
 ### 実装
 ```python
