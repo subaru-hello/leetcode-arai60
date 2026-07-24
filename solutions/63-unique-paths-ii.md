@@ -35,6 +35,33 @@ class Solution:
 
 ```
 
+## Step 2 (2026-07-24)
+
+### 考えたこと
+- Step 1 のコードをベースに変数名を整理
+- スタート地点が障害物の場合のエッジケースを追加
+
+### 実装
+```python
+class Solution:
+    def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
+        if obstacleGrid[0][0] == 1:
+            return 0
+
+        num_of_rows = len(obstacleGrid)
+        num_of_cols = len(obstacleGrid[0])
+
+        num_of_paths = [0] * num_of_cols
+        num_of_paths[0] = 1
+        for r in range(num_of_rows):
+            for c in range(num_of_cols):
+                if obstacleGrid[r][c] == 1:
+                    num_of_paths[c] = 0
+                elif c > 0:
+                    num_of_paths[c] += num_of_paths[c - 1]
+        return num_of_paths[-1]
+```
+
 ## references
 
 ### ref1: olsen-blue — 2D DP（端の初期化を明示的に行うパターン）
