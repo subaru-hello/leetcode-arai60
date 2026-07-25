@@ -30,6 +30,32 @@ class Solution:
         return max(rob_linear(nums[1:]), rob_linear(nums[:-1]))
 ```
 
+## Step 2 (2026-07-25)
+
+### 考えたこと
+- スライス（O(n) 空間）→ index 制御（O(1) 空間）に変更
+- `rob_helper(begin, end)` で `nums[begin..end-1]` を処理
+- `range(start, end)` は半開区間なので `end` にそのまま `len(nums)` を渡せる
+
+### 実装
+```python
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        def rob_helper(begin, end):
+            one_prev_max = 0
+            two_prev_max = 0
+            for i in range(begin, end):
+                current_max = max(one_prev_max, two_prev_max + nums[i])
+                two_prev_max = one_prev_max
+                one_prev_max = current_max
+            return one_prev_max
+
+        if len(nums) == 1:
+            return nums[0]
+
+        return max(rob_helper(1, len(nums)), rob_helper(0, len(nums) - 1))
+```
+
 ## references
 
 ### ref1: olsen-blue — #198 を再利用するパターン
