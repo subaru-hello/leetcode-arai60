@@ -26,6 +26,27 @@ class Solution:
         return max_profit
 ```
 
+## Step 2 (2026-07-26)
+
+### 考えたこと
+- `hold`/`not_hold` の状態DPで解く（#122 に繋がる汎用パターン）
+- `profit_holding` = 株を保有している状態での損益（買値をマイナスとして持つ）
+- `max_profit_sold` = 売却した場合の最大利益（最終的な答え）
+- 各日、「昨日までの hold で今日売ったら」を先に計算 → その後「今日買い直した方が得か」を更新（順序を守らないと過去の情報が消える）
+
+### 実装
+```python
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        profit_holding = -prices[0]
+        max_profit_sold = 0
+
+        for price in prices[1:]:
+            max_profit_sold = max(max_profit_sold, profit_holding + price)
+            profit_holding = max(profit_holding, -price)
+        return max_profit_sold
+```
+
 ## references
 
 ### ref1: olsen-blue — 配列版から始めて空間 O(1) に議論で気づくパターン
