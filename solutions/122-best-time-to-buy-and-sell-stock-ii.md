@@ -26,6 +26,25 @@ class Solution:
         return not_hold
 ```
 
+## Step 2 (2026-07-27)
+
+### 考えたこと
+- 貪欲法: 「毎日、日終わりに売って同じ値段ですぐ買い戻す」と仮定すると、連続保有の利益は日ごとの差分の合計と数学的に一致する（telescoping）
+- 下がる日の差分（マイナス）だけスキップすれば、上がる区間だけを漏れなく拾える
+- 状態DP（hold/not_hold）は不要になり、1重ループで解ける
+
+### 実装
+```python
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        profit = 0
+
+        for i in range(1, len(prices)):
+            if prices[i] > prices[i - 1]:
+                profit += prices[i] - prices[i - 1]
+        return profit
+```
+
 ## references
 
 ### ref1: olsen-blue — 貪欲法（上がる区間の差分を全部足す）
