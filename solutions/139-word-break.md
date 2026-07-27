@@ -29,6 +29,30 @@ class Solution:
         return dp[-1]
 ```
 
+## Step 2 (2026-07-27)
+
+### 考えたこと
+- refs の startswith 版を試す。スライスのコピーを作らず s.startswith(word, i) で直接チェック
+- dp[i] = True のとき、そこから word が続いていれば dp[i + len(word)] = True（単語1個分前進した位置に印をつける）
+- dp[i] が False の位置は探索をスキップして無駄を省く
+
+### 実装
+```python
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        dp = [False] * (len(s) + 1)
+        dp[0] = True
+        word_set = set(wordDict)
+
+        for i in range(len(s)):
+            if not dp[i]:
+                continue
+            for word in word_set:
+                if s.startswith(word, i):
+                    dp[i + len(word)] = True
+        return dp[-1]
+```
+
 ## references
 
 ### ref1: olsen-blue — トップダウンDP（メモ化再帰、startswith 版）
