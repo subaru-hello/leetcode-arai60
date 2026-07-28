@@ -35,6 +35,59 @@ class Solution:
         return -1
 ```
 
+## Step 2 (2026-07-28)
+
+### 考えたこと
+- DP版: 変数名を dp→min_coins, i→target に整理し、何を表しているか明確化
+- BFS版: amount を「ゴール」、0を「スタート」とみなし、各コインを「1歩」として最短到達歩数を求める
+- BFS では current（今いる場所）/ coin（使う道具）/ candidate（道具を使った結果の次の場所）を混同しないことが重要
+- for _ in range(len(queue)) で「1歩分をまとめて処理してから次の歩数に進む」パターン（#103 Zigzag と同じ）
+
+### 実装（DP版・整理後）
+```python
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        min_coins = [float('inf')] * (amount + 1)
+        min_coins[0] = 0
+
+        for target in range(1, amount + 1):
+            for coin in coins:
+                if coin <= target:
+                    current_min = min_coins[target]
+                    candidate = min_coins[target - coin] + 1
+                    min_coins[target] = min(current_min, candidate)
+        if min_coins[amount] != float('inf'):
+            return min_coins[amount]
+
+        return -1
+```
+
+### 実装（BFS版・別解）
+```python
+from collections import deque
+
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        if amount == 0:
+            return 0
+        queue = deque([0])
+        visited = {0}
+        changed_counts = 0
+        while queue:
+            changed_counts += 1
+            for _ in range(len(queue)):
+                current = queue.popleft()
+                for coin in coins:
+                    candidate = current + coin
+                    if candidate == amount:
+                        return changed_counts
+
+                    if candidate < amount and candidate not in visited:
+                        visited.add(candidate)
+                        queue.append(candidate)
+        return -1
+```
+
 ## references
 
 ### ref1: olsen-blue — 変数名の明確化 + BFS別解の議論
