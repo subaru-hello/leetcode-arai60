@@ -77,7 +77,7 @@
 | 37 | 121 | Best Time to Buy and Sell Stock | best-time-to-buy-and-sell-stock | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ | ○-- | 2026-07-25 | 4 | 2026-07-26 | learning |
 | 38 | 122 | Best Time to Buy and Sell Stock II | best-time-to-buy-and-sell-stock-ii | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ | ○-- | 2026-07-26 | 3 | 2026-07-27 | learning |
 | 39 | 139 | Word Break | word-break | https://leetcode.com/problems/word-break/ | ○-- | 2026-07-27 | 3 | 2026-07-28 | learning |
-| 40 | 322 | Coin Change | coin-change | https://leetcode.com/problems/coin-change/ | --- | - | - | - | untouched |
+| 40 | 322 | Coin Change | coin-change | https://leetcode.com/problems/coin-change/ | ○-- | 2026-07-28 | 3 | 2026-07-29 | learning |
 
 ## Binary Search
 
