@@ -84,7 +84,7 @@
 | 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
 |---|---|---|---|---|---|---|---|---|---|
 | 41 | 35 | Search Insert Position | search-insert-position | https://leetcode.com/problems/search-insert-position/ | ○-- | 2026-07-28 | 10 | 2026-07-29 | learning |
-| 42 | 153 | Find Minimum in Rotated Sorted Array | find-minimum-in-rotated-sorted-array | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ | --- | - | - | - | untouched |
+| 42 | 153 | Find Minimum in Rotated Sorted Array | find-minimum-in-rotated-sorted-array | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ | ○-- | 2026-07-29 | 5 | 2026-07-30 | learning |
 | 43 | 33 | Search in Rotated Sorted Array | search-in-rotated-sorted-array | https://leetcode.com/problems/search-in-rotated-sorted-array/ | --- | - | - | - | untouched |
 | 44 | 1011 | Capacity To Ship Packages Within D Days | capacity-to-ship-packages-within-d-days | https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/ | --- | - | - | - | untouched |
 
