@@ -31,6 +31,33 @@ class Solution:
         return helper(0, len(nums) - 1)
 ```
 
+## Step 2 (2026-07-29)
+
+### 考えたこと
+- 再帰版 → while ループ版に書き換え（refs で「再帰は実装が重くなる」との指摘があったため）
+- コーナーケース（target が全要素より大きい）を関数の先頭で先に処理
+- nums[mid] < target なら target は右側にある → left = mid + 1、そうでなければ target は mid 以下 → right = mid
+- left < right で収束するまでループ（半開区間）
+
+### 実装
+```python
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        if nums[-1] < target:
+            return len(nums)
+
+        left = 0
+        right = len(nums) - 1
+        while left < right:
+            mid = (left + right) // 2
+            if nums[mid] < target:
+                left = mid + 1
+            else:
+                right = mid
+
+        return left
+```
+
 ## references
 
 ### ref1: olsen-blue — 再帰版から while ループへの書き換え議論
