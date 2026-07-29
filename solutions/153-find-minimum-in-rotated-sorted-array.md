@@ -27,6 +27,31 @@ class Solution:
         return nums[left]
 ```
 
+## Step 2 (2026-07-29)
+
+### 考えたこと
+- Step 1 の while ループを再帰版に書き換え
+- ロジックは同じ: nums[mid] < nums[end] なら最小値は mid かそれより左（end=mid）、そうでなければ mid より右（start=mid+1）
+- start == end で探索範囲が1点に収束したら、それが答え
+
+### 実装
+```python
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        def helper(start, end):
+            if start == end:
+                return nums[start]
+
+            mid = (start + end) // 2
+            if nums[mid] < nums[end]:
+                end = mid
+            else:
+                start = mid + 1
+
+            return helper(start, end)
+        return helper(0, len(nums) - 1)
+```
+
 ## references
 
 ### ref1: olsen-blue — 境界探索パターンの一般化と重複要素の注意点
