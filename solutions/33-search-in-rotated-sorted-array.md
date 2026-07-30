@@ -45,32 +45,36 @@ class Solution:
 ### 考えたこと
 - while ループ版 → 再帰版（inner function）に書き換え
 - start > end を base case（探索範囲が尽きた = 見つからない）
-- ロジックは Step 1 と同じ。start/end を更新してから helper(start, end) を再帰呼び出しする形（#153 と同じパターン）
+- refs（saagchicken）の指摘通り、「次にどの範囲を探すか」を next_range() に切り出してネストを浅くした
+- find_target_index という名前にして、何をする関数か名前だけで伝わるようにした（refs の olsen-blue と同じ命名）
 
 ### 実装
 ```python
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        def helper(start, end):
+        def next_range(start, mid, end):
+            if nums[start] <= nums[mid]:
+                if nums[start] <= target < nums[mid]:
+                    return start, mid - 1
+                else:
+                    return mid + 1, end
+            else:
+                if nums[mid] < target <= nums[end]:
+                    return mid + 1, end
+                else:
+                    return start, mid - 1
+
+        def find_target_index(start, end):
             if start > end:
                 return -1
 
             mid = (start + end) // 2
             if nums[mid] == target:
                 return mid
+            next_start, next_end = next_range(start, mid, end)
 
-            if nums[start] <= nums[mid]:
-                if nums[start] <= target < nums[mid]:
-                    end = mid - 1
-                else:
-                    start = mid + 1
-            else:
-                if nums[mid] < target <= nums[end]:
-                    start = mid + 1
-                else:
-                    end = mid - 1
-            return helper(start, end)
-        return helper(0, len(nums) - 1)
+            return find_target_index(next_start, next_end)
+        return find_target_index(0, len(nums) - 1)
 ```
 
 ## references
