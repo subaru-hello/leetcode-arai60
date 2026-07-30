@@ -40,6 +40,39 @@ class Solution:
         return -1
 ```
 
+## Step 2 (2026-07-30)
+
+### 考えたこと
+- while ループ版 → 再帰版（inner function）に書き換え
+- start > end を base case（探索範囲が尽きた = 見つからない）
+- ロジックは Step 1 と同じ。start/end を更新してから helper(start, end) を再帰呼び出しする形（#153 と同じパターン）
+
+### 実装
+```python
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        def helper(start, end):
+            if start > end:
+                return -1
+
+            mid = (start + end) // 2
+            if nums[mid] == target:
+                return mid
+
+            if nums[start] <= nums[mid]:
+                if nums[start] <= target < nums[mid]:
+                    end = mid - 1
+                else:
+                    start = mid + 1
+            else:
+                if nums[mid] < target <= nums[end]:
+                    start = mid + 1
+                else:
+                    end = mid - 1
+            return helper(start, end)
+        return helper(0, len(nums) - 1)
+```
+
 ## references
 
 ### ref1: olsen-blue — 再帰版・inner function の是非をめぐる議論
