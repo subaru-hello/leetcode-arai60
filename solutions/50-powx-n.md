@@ -32,6 +32,34 @@ class Solution:
             return x * self.myPow(x, n - 1)
 ```
 
+## Step 2 (2026-08-02)
+
+### 自分なりに整形
+- `n % 2 == 0` を `is_even` という真偽値変数に切り出した。参考PR (hayashi-ay/leetcode#41) で nodchip から「`n % 2` の 0/1 と偶数/奇数の対応が直感的か疑問」と指摘されていたのと同じ論点。
+- 一方 `n < 0` も同様に `is_negative` に切り出してみたが、こちらは効果が薄いと判断して差し戻した。`n < 0` はそのままで十分読める。**指摘されていた具体的な問題（0/1 と偶奇の対応）を持つ箇所だけ直す**方が、機械的に全部を変数化するより意図が伝わる。
+
+### 他人のコードを読んでの気づき
+- hayashi-ay/leetcode#41 の実際のレビューコメントを読んだ（詳細は下記 hayashi-ay 参照欄）。要点は「変数名は一発で決まらない、レビューの往復で収束する」こと。`digits`/`res` → `cumulated`/`powered` と直したら意味が逆になっていた、というエピソードが印象的だった。
+- 再帰 vs ループの選択は「個人差がある」という nodchip のコメントに納得。今回は再帰のままで進める（Step 1 から書き慣れているため）。
+
+### 再整形後の実装
+```python
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        if n == 0:
+            return 1
+
+        if n < 0:
+            return 1 / self.myPow(x, -n)
+
+        is_even = n % 2 == 0
+        if is_even:
+            half_powered = self.myPow(x, n // 2)
+            return half_powered * half_powered
+        else:
+            return x * self.myPow(x, n - 1)
+```
+
 ## 参考
 
 ### olsen-blue/Arai60 #45
