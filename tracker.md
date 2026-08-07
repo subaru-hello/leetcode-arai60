@@ -93,7 +93,7 @@
 | 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
 |---|---|---|---|---|---|---|---|---|---|
 | 45 | 50 | Pow(x, n) | powx-n | https://leetcode.com/problems/powx-n/ | ○-- | 2026-08-01 | 6 | 2026-08-02 | learning |
-| 46 | 779 | K-th Symbol in Grammar | k-th-symbol-in-grammar | https://leetcode.com/problems/k-th-symbol-in-grammar/ | --- | - | - | - | untouched |
+| 46 | 779 | K-th Symbol in Grammar | k-th-symbol-in-grammar | https://leetcode.com/problems/k-th-symbol-in-grammar/ | ○-- | 2026-08-07 | 5 | 2026-08-08 | learning |
 | 47 | 776 | Split BST | split-bst | https://leetcode.com/problems/split-bst/ | --- | - | - | - | untouched |
 
 ## Sliding Window
