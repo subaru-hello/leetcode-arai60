@@ -31,6 +31,28 @@ class Solution:
         return longest
 ```
 
+## Step 2 (2026-08-09)
+
+### 考えたこと
+- refs の `left = max(left, seen[c] + 1)` も検討したが、`if文`版の方が「なぜその処理か」を初見で読み取りやすいと判断し、こちらを採用
+- `max()`版は短いが「leftは単調増加する」という性質を知らないと意図が読みづらい。可読性を優先
+
+### 実装
+```python
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        left = 0
+        seen = {}
+        longest = 0
+
+        for right, c in enumerate(s):
+            if c in seen and seen[c] >= left:
+                left = seen[c] + 1
+            seen[c] = right
+            longest = max(longest, right - left + 1)
+        return longest
+```
+
 ## references
 
 ### ref1: olsen-blue — max()でleft更新をシンプルに
