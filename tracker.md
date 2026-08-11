@@ -101,7 +101,7 @@
 | 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
 |---|---|---|---|---|---|---|---|---|---|
 | 48 | 3 | Longest Substring Without Repeating Characters | longest-substring-without-repeating-characters | https://leetcode.com/problems/longest-substring-without-repeating-characters/ | ○-- | 2026-08-09 | 4 | 2026-08-10 | learning |
-| 49 | 209 | Minimum Size Subarray Sum | minimum-size-subarray-sum | https://leetcode.com/problems/minimum-size-subarray-sum/ | --- | - | - | - | untouched |
+| 49 | 209 | Minimum Size Subarray Sum | minimum-size-subarray-sum | https://leetcode.com/problems/minimum-size-subarray-sum/ | △-- | 2026-08-11 | 20 | 2026-08-12 | learning |
 
 ## Greedy + Backtracking
 
