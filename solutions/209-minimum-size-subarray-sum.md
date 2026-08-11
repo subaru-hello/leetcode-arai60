@@ -20,13 +20,42 @@ class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         left = 0
         min_length = float("inf")
-        cummulated_sum = 0
+        cumulative_sum = 0
         for right, num in enumerate(nums):
-            cummulated_sum += num
-            while cummulated_sum >= target:
+            cumulative_sum += num
+            while cumulative_sum >= target:
                 min_length = min(min_length, right - left + 1)
-                cummulated_sum -= nums[left]
+                cumulative_sum -= nums[left]
                 left += 1
+        return min_length if min_length != float("inf") else 0
+```
+
+## Step 2 (2026-08-11)
+
+### 考えたこと
+- refs の「累積和が単調増加なら二分探索が使える」を試す。O(n log n)、#300のbisect版と同じ発想
+- prefix[right] - prefix[left] >= target ⇔ prefix[left] <= prefix[right] - target
+- windowを最短にしたいので left はできるだけ大きい方がいい。prefixは単調増加なので、bisect_right(prefix, needed) - 1 で「条件を満たす最大のleft」を一発で探せる
+- Sliding Window（O(n)）の方が効率は良く実装もシンプルなので、実務では Step1 の方を使う。今回は別解の練習として実装
+
+### 実装
+```python
+import bisect
+
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        n = len(nums)
+        prefix = [0] * (n + 1)
+        for i in range(n):
+            prefix[i + 1] = prefix[i] + nums[i]
+
+        min_length = float("inf")
+        for right in range(1, n + 1):
+            needed = prefix[right] - target
+            left = bisect.bisect_right(prefix, needed) - 1
+            if left >= 0:
+                min_length = min(min_length, right - left)
+
         return min_length if min_length != float("inf") else 0
 ```
 
