@@ -107,7 +107,7 @@
 
 | 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
 |---|---|---|---|---|---|---|---|---|---|
-| 50 | 46 | Permutations | permutations | https://leetcode.com/problems/permutations/ | --- | - | - | - | untouched |
+| 50 | 46 | Permutations | permutations | https://leetcode.com/problems/permutations/ | ○○○ | 2026-08-14 | 10 | - | mastered |
 | 51 | 78 | Subsets | subsets | https://leetcode.com/problems/subsets/ | --- | - | - | - | untouched |
 | 52 | 39 | Combination Sum | combination-sum | https://leetcode.com/problems/combination-sum/ | --- | - | - | - | untouched |
 | 53 | 22 | Generate Parentheses | generate-parentheses | https://leetcode.com/problems/generate-parentheses/ | --- | - | - | - | untouched |
