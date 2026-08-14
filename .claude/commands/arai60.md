@@ -1,19 +1,28 @@
-arai60 ルーティンを実行してください。SWE協会推奨フロー（自力で解く → 他者コードを学ぶ → 3回連続10分で master）を spaced repetition で仕組み化します。
+arai60 ルーティンを実行してください。SWE協会公式フロー（自力で解く → 整形 → その場で3回連続10分で master → レビュー依頼）をそのまま踏襲します。
 
 参照ディレクトリ: `~/Personal/leetcode-arai60/` (public リポ。subaru-hello/leetcode-arai60)
 - `tracker.md` — 全69問の進捗テーブル（single source of truth、公開）
 - `queue.md` — 今日のキュー（ローカルのみ、.gitignore 対象）
 - `log/YYYY-MM-DD.md` — 日次ログ（ローカルのみ、.gitignore 対象）
-- `solutions/<#>-<slug>.md` — 実装 + 思考 + references + notes（公開、1問1PR、`.md` で書く）
+- `problems/<#>-<slug>/` — 1問1フォルダ（公開、1問1PR）
+  - `step1.py` — 初回AC時のコード
+  - `step2.py` — 読みやすく整形したコード
+  - `step3.py` — 「消して10分以内ノーエラーで書く」を3回連続クリアした最終コード
+  - `memo.md` — 各ステップで感じたこと・考えたこと・参考リンク
 
 参照ドキュメント: `~/Personal/octomblog-astro/src/content/docs/concepts_arai60_overview.md`
 
-## 重要: レビュー駆動フロー（hayashi-ay 流）
+## 重要: 公式フロー（SWE協会の練習方法そのまま）
 
-- `.py` ではなく **`.md`** にコード(```python ブロック)と思考を混ぜて書く
+1. **Step 1（AC獲得）**: 答えを見ずに考える。**5分**考えて分からなければ参考を1つ開いて読む。理解したら閉じて、隠しながら書く。筆が止まって5分迷ったらまた開く。**一度見たら、書いた分を全部消してやり直す**。これを繰り返し、AC する。
+2. **Step 2（整形）**: Step 1 で通ったコードを、読みやすく整形する。動くことを再確認。
+3. **Step 3（体に叩き込む、その場で3回連続）**: 一旦コードを全部消す。LeetCodeのページを開き、時間を測りながらもう一度書く。ACできたらまた消して、もう一度書く。**10分以内・ノーエラーで書けるまで**これを繰り返す。**それが3回連続でできたら、その場で mastered**（日をまたいだ spaced repetition ではない）。
+4. **レビュー依頼**: Step 3 まで終わったタイミングで PR を作成し、レビューを依頼する。
+
+- `.py` ファイルにコードを書く。思考・感想は `memo.md` に集約。
 - 1問1ブランチ: `feat/<#>-<slug>`
 - 1問1PR、**merge しない**（open のままレビューコメント保存場所として使う）
-- attempt ごとに commit して push、レビューが付くと次の attempt に反映
+- PRはStep 3（3回連続クリア）が終わった時点で作成する。
 
 ## サブコマンド判定
 
@@ -22,8 +31,9 @@ arai60 ルーティンを実行してください。SWE協会推奨フロー（�
 引数の1つ目で分岐:
 
 - なし / `today` → **今日のキュー表示**
-- `start <slug>` → **計測開始**
-- `done <slug> <分> <ok|ng>` → **attempt 完了**
+- `start <slug>` → **Step 1 計測開始**
+- `retry <slug>` → **Step 3 の1回分試行（その場で3回連続を数える）**
+- `done <slug> <分> <ok|ng>` → **試行完了（Step 1/2/3共通）**
 - `refs <slug>` → **他者コード取得**
 - `review` → **週次集計**
 
@@ -39,9 +49,9 @@ arai60 ルーティンを実行してください。SWE協会推奨フロー（�
    - slug: <slug>
    - URL: <url>
    - カテゴリ: <category>
-   - ファイル: solutions/<#>-<slug>.md
+   - フォルダ: problems/<#>-<slug>/
    - ブランチ: feat/<#>-<slug>
-   - 目標: 10分以内、ノーエラー
+   - 目標: Step1でAC → Step2で整形 → Step3で10分以内ノーエラーを3回連続
 
    ## 手順
    1. `/arai60 start <新規slug>` で計測開始
@@ -68,98 +78,104 @@ arai60 ルーティンを実行してください。SWE協会推奨フロー（�
   }
   ```
 
-## 2. `start <slug>` — 計測開始
+## 2. `start <slug>` — Step 1 計測開始
 
 1. `log/YYYY-MM-DD.md` を作成（なければ）して、`## <slug> — 開始: HH:MM` を追記。
-2. **AC ベースライン記録**: `arai60_ac_count` で現在の AC 合計数を取得 → log に `<slug>:ac_before=<N>` を追記。LeetCode が応答しない場合は `ac_before=skip` と記録（後段の自動判定を諦める）。
-2. tracker.md から `<#>` (問題番号) と問題名・URL・カテゴリを取得。
-3. `solutions/<#>-<slug>.md` が存在しなければ、テンプレを作る（**3セクション構造: ルール / attempt / 参考**）:
+2. **AC ベースライン記録**: `arai60_ac_count` で現在の AC 合計数を取得 → log に `<slug>:ac_before=<N>` を追記。LeetCode が応答しない場合は `ac_before=skip` と記録。
+3. tracker.md から `<#>` (問題番号) と問題名・URL・カテゴリを取得。
+4. `problems/<#>-<slug>/` フォルダが存在しなければ作成し、テンプレを作る:
+   ```
+   problems/<#>-<slug>/
+   ├── step1.py
+   ├── step2.py
+   ├── step3.py
+   └── memo.md
+   ```
+   `memo.md` のテンプレ:
    ```markdown
    # <#>. <問題名>
    <URL>
 
-   ## ルール
-   - **Step 1**: まず自力で15分。詰まったら参考を1つだけ開いて読む → 閉じて要約 → 自分で実装 → AC
-   - **Step 2**: 自分なりに整形 → 他人のコードを読んで再整形 → PR でレビュー依頼
-   - **Step 3**: レビュー反映 → 10分以内にエラーなく書く
+   ## ルール（公式フロー）
+   - Step 1: 5分考えて分からなければ参考を1つ開く。見たら全部消してやり直す。AC する。
+   - Step 2: 読みやすく整形する。
+   - Step 3: 全部消してもう一度書く。10分以内・ノーエラーで書けるまで繰り返す。3回連続できたら mastered。
 
    ## Step 1 (YYYY-MM-DD, ?? min, ??)
-
-   ### 1-A: 自力で考えたこと
-   - データ構造案:
-   - アルゴリズム案:
-
-   ### 1-B: 詰まった点
+   ### 考えたこと
    -
 
-   ### 1-C: 自分が理解した解法
+   ## Step 2
+   ### 整形して変えた点
    -
 
-   ### 1-D: 実装
-   ```python
-
-   ```
+   ## Step 3（3回連続の記録）
+   - 1回目: YYYY-MM-DD, ?? min, ??
+   - 2回目: YYYY-MM-DD, ?? min, ??
+   - 3回目: YYYY-MM-DD, ?? min, ??
 
    ## 参考
    - (arai60 PRs を自動添付)
    ```
-   - **attempt 表記は使わない**。`## Step 1`, `## Step 2`, `## Step 3` のみ。
-   - PR description には別途 `今回解いた問題 / 次に解く問題 / 言語` + 学習方法 Step 1/2/3 を入れる。
-4. **ブランチ自動切り替え**: `git branch --show-current` で `feat/<#>-<slug>` 上にいなければ自動で切り替える:
+5. **ブランチ自動切り替え**: `git branch --show-current` で `feat/<#>-<slug>` 上にいなければ自動で切り替える:
    ```bash
    git checkout main && git checkout -b feat/<#>-<slug>
    ```
    - 既存ブランチが存在する場合は `git checkout feat/<#>-<slug>`。
    - 未コミット変更があると失敗するので、その場合のみユーザーに stash/commit を促す。
-4.5. **参考 PR の自動添付**: `gh search repos "arai60" --limit 30` で arai60 系リポを列挙し、各リポの PR 一覧から `<#>` または `<問題名>` にマッチする PR を検索する。見つかった PR URL を `solutions/<#>-<slug>.md` の **`## 参考` セクション**に **5件** 追記する。
-   - 検索クエリ例: `gh pr list --repo <owner>/<repo> --json title,url --limit 200 | jq '.[] | select(.title | test("<#>[_. ]|<問題名>";"i"))'`
+6. **参考 PR の自動添付**: `gh search repos "arai60" --limit 30` で arai60 系リポを列挙し、各リポの PR 一覧から `<#>` または `<問題名>` にマッチする PR を検索する。見つかった PR URL を `memo.md` の **`## 参考` セクション**に **5件** 追記する。
    - 5件に満たない場合は類題（同じパターンの代表問題）の PR で補い、その旨を明記する。
    - **arai60 community PR のみ** 貼る。LeetCode Editorial / neetcode の URL は貼らない。
-5. ユーザーに伝える:
-   > `solutions/<#>-<slug>.md` に attempt 1 を書いてください。
+7. ユーザーに伝える:
+   > `problems/<#>-<slug>/memo.md` に考えたことを書きながら、`step1.py` にコードを書いてください。
    > LeetCode URL: <URL>
    > AC ベースライン: <N>問 (現時点)
+   > **5分考えて分からなければ、参考を1つだけ開いてください。見たら書いた分を全部消してやり直します。**
    > 終わったら `/arai60 done <slug>` （引数なしで自動判定。失敗時は `/arai60 done <slug> <分> ok` で手動）
 
-## 3. `done <slug> [<分>] [<ok|ng>]` — attempt 完了
+## 3. `done <slug> [<分>] [<ok|ng>]` — 試行完了
 
 引数: `<分>` 省略時は log の `開始: HH:MM` から自動計算。`<ok|ng>` 省略時は LeetCode AC カウンタ差分で自動判定。
 
-1. **AC 自動判定**:
+**現在どのStepかの判定**: `problems/<#>-<slug>/step1.py` が空 → Step1。`step1.py`に中身があり`step2.py`が空 → Step2。`step2.py`に中身があり`step3.py`が3回連続クリアしていない → Step3進行中。
+
+1. **AC 自動判定**（Step1/Step3のみ、Step2は整形なのでAC判定不要）:
    - log から `<slug>:ac_before=<N>` を読む。
    - `arai60_ac_count` で現在の AC 数 `<M>` を取得。
    - `<M> > <N>` なら自動で `ok` 扱い。等しければ「AC 未検出」として処理を中断:
      > LeetCode に新規 AC が記録されていません。submit を確認してください。
      > 手動で確定する場合は `/arai60 done <slug> <分> ok` を実行。
    - `ac_before=skip` の場合は自動判定をスキップし、引数の `<ok|ng>` を使用（必須）。
-2. `tracker.md` の該当行を読む。現在の attempts 列を取得。
-3. **status 判定**:
-   - `ok` かつ `分 <= 10` → attempts に `○` 追加
-   - `ok` かつ `分 > 10` → `△` 追加（クリアしたが時間オーバー、カウントは進めない）
-   - `ng` → `×` 追加、attempts をリセット (`---`)
-3. **status と次回復習日を計算**（今日を基準）:
-   - attempts が `○--` → `learning` / 翌日
-   - `○○-` → `reviewing` / 3日後
-   - `○○○` → `mastered` / 30日後（masterおめでとう表示）
-   - `△` や `×` 含む → `learning` のまま / 翌日
-4. `tracker.md` の該当行を Edit で更新（attempts / 最終解答日 / 最終(分) / 次回復習 / status）。
-5. `solutions/<#>-<slug>.md` の **Step ヘッダ**を更新する。例: `## Step 1 (YYYY-MM-DD, ?? min, ??)` → `## Step 1 (今日, <分>min, <ok|ng>)`。
-   - Step 1 が既に完了済み（タイム入り）なら、新しい `## Step N` セクションを末尾に追記（テンプレ部分付き）。
-   - attempt N の表記は使わない。Step 1 / Step 2 / Step 3 のみ。
-6. `log/YYYY-MM-DD.md` に `## <slug> — 完了: <分>min / <ok|ng> / status=<新status>` を追記。
-7. **1回目クリア時（attempts が `○--` になった瞬間）は自動で `refs <slug>` を呼ぶ**。
-8. **commit/push は提案も実行もしない（ユーザーが手動でやる）**。ファイル更新まで完了したら結果サマリだけ表示する。
+
+2. **Step1完了時**: `step1.py` にコードを保存。`memo.md` の `## Step 1` に日付・分・ok/ngを記録。`ok`なら次はStep2に進むよう促す。`ng`ならStep1をやり直すよう促す（全部消してリトライ）。
+
+3. **Step2完了時**: `step2.py` に整形版を保存。`memo.md` の `## Step 2` に変更点を記録。次はStep3（3回連続チャレンジ）に進むよう促す。
+
+4. **Step3進行中（3回連続カウント）**:
+   - `ok` かつ `分 <= 10` → `memo.md` の `## Step 3` に「N回目: 記録」を追記し、連続カウントを+1。
+   - `ok` かつ `分 > 10` → 連続カウントを**0にリセット**（10分超は失敗扱い）。「10分超のためカウントリセット、もう一度」と伝える。
+   - `ng` → 連続カウントを**0にリセット**。「全部消してもう一度」と伝える。
+   - **連続カウントが3に到達したら mastered**。`step3.py` に最終コードを保存。
+
+5. `tracker.md` の該当行を Edit で更新:
+   - Step1/2進行中 → status=`in-progress`
+   - Step3 mastered達成 → status=`mastered`、attempts列に`○○○`、最終解答日=今日、次回復習列は使わない（`-`のまま。spaced repetitionを廃止したため）。
+   - Step3失敗（リセット） → status=`in-progress`のまま（日をまたいだ再挑戦ではなく、その場で仕切り直し）。
+
+6. `log/YYYY-MM-DD.md` に `## <slug> — 完了: <分>min / <ok|ng> / Step<N> / 連続<X>回目` を追記。
+
+7. **commit/push は提案も実行もしない（ユーザーが手動でやる）**。ファイル更新まで完了したら結果サマリだけ表示する。
    - **重要**: ブランチ切替時に未コミットファイルがあっても、勝手に `git commit && git push` してはいけない。必ずユーザーに選択肢（commit / stash / discard）を示して指示を待つ。
-   - 運用方針: `tracker.md` は main 直 push、`solutions/<#>-<slug>.md` は `feat/<#>-<slug>` ブランチで PR（**merge しない、open のまま運用**）。
-   - 1回目クリア後の **PR description テンプレ**（ユーザーが `gh pr create` するときに使う形式）:
+   - 運用方針: `tracker.md` は main 直 push、`problems/<#>-<slug>/` は `feat/<#>-<slug>` ブランチで PR（**merge しない、open のまま運用**）。
+   - **mastered達成時（Step3の3回連続クリア時）に PR description テンプレ**を出力:
      ```
      今回解いた問題：<#>. <問題名>
      次に解く問題　：<次回新規の#>. <次回新規の問題名>
      言語：<lang>
      ```
      - 「次に解く問題」は `tracker.md` で当該行の次の `untouched` 行を見て決める。
-     - 「言語」は solutions の Python ブロックから推定。明示されている場合はそれを使う。
-9. ユーザーに結果サマリを表示（status・次回復習日・master まで残り何回か）。続けて **PR description テンプレ**（上記）を出力して、ユーザーがコピペできるようにする。
+
+8. ユーザーに結果サマリを表示（今どのStep・3回連続のうち何回目か）。mastered達成時は **PR description テンプレ**を出力してコピペできるようにする。
 
 ## 4. `refs <slug>` — 他者コード取得
 
@@ -169,7 +185,7 @@ arai60 ルーティンを実行してください。SWE協会推奨フロー（�
    - `https://github.com/neetcode-gh/leetcode` を検索（slug 名で grep してリポジトリ内の python ファイルを探す）
    - `https://docs.python.org/3/library/<関連library>.html` — collections / heapq / bisect など、問題に関連する標準ライブラリ
 3. 各ソースから **解法コード + 計算量 + 1行コメント** を抽出して整形。
-4. `solutions/<#>-<slug>.md` の `## references` セクション配下に追記:
+4. `problems/<#>-<slug>/memo.md` の `## references` セクション配下に追記:
    ```markdown
    ## references
 
@@ -196,21 +212,26 @@ arai60 ルーティンを実行してください。SWE協会推奨フロー（�
    ...
    \`\`\`
    ```
-5. ユーザーに「`solutions/<#>-<slug>.md` に3解法を追記しました」と伝える。
+5. ユーザーに「`memo.md` に3解法を追記しました」と伝える。
 
 ## 5. `review` — 週次集計
 
 1. `tracker.md` の全行を集計:
-   - 総問題数 / `mastered` / `reviewing` / `learning` / `untouched` の内訳
+   - 総問題数 / `mastered` / `in-progress` / `untouched` の内訳
    - カテゴリ別の master 率
 2. `log/` ディレクトリの直近7日分のログを読み、attempts 数・平均所要時間を集計。
-3. **詰まりカテゴリ**: 同じカテゴリで `×` や `△` が多い問題TOP3を抽出。
+3. **詰まりカテゴリ**: 同じカテゴリでStep3リセットが多い問題TOP3を抽出。
 4. 結果を表示:
    ```
    ## 週次サマリ (YYYY-MM-DD)
-   - 進捗: 69問中 X mastered / Y reviewing / Z learning / W untouched
+   - 進捗: 69問中 X mastered / Y in-progress / Z untouched
    - 今週の attempts: N回（目標14回）
    - 平均所要: X分
    - 詰まりカテゴリTOP3: ...
    - 来週の重点: <提案>
    ```
+
+## 移行に関する注意
+
+- 2026-08-13 に spaced repetition運用から公式フローに移行。既存の `solutions/<#>-<slug>.md`（旧形式）は**そのまま残す**（遡って`problems/`構造に変換しない）。新規問題からこの新フローを適用する。
+- 既存 `tracker.md` の `learning`/`reviewing` status の問題は、次に着手する際に Step1 からではなく現在の理解度に応じて Step2/Step3 から再開してよい（ユーザー判断）。
