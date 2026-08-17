@@ -110,7 +110,7 @@
 | 50 | 46 | Permutations | permutations | https://leetcode.com/problems/permutations/ | ○○○ | 2026-08-14 | 10 | - | mastered |
 | 51 | 78 | Subsets | subsets | https://leetcode.com/problems/subsets/ | ○○○ | 2026-08-14 | 10 | - | mastered |
 | 52 | 39 | Combination Sum | combination-sum | https://leetcode.com/problems/combination-sum/ | ○○○ | 2026-08-16 | 3 | - | mastered |
-| 53 | 22 | Generate Parentheses | generate-parentheses | https://leetcode.com/problems/generate-parentheses/ | --- | - | - | - | untouched |
+| 53 | 22 | Generate Parentheses | generate-parentheses | https://leetcode.com/problems/generate-parentheses/ | ○○○ | 2026-08-16 | 4 | - | mastered |
 
 ## Other
 
