@@ -117,7 +117,7 @@
 | 順 | # | 問題 | slug | URL | attempts | 最終解答日 | 最終(分) | 次回復習 | status |
 |---|---|---|---|---|---|---|---|---|---|
 | 54 | 283 | Move Zeroes | move-zeroes | https://leetcode.com/problems/move-zeroes/ | ○○○ | 2026-08-20 | 1 | - | mastered |
-| 55 | 252 | Meeting Rooms | meeting-rooms | https://leetcode.com/problems/meeting-rooms/ | --- | - | - | - | untouched |
+| 55 | 252 | Meeting Rooms | meeting-rooms | https://leetcode.com/problems/meeting-rooms/ | ○○○ | 2026-08-20 | 1 | - | mastered |
 | 56 | 253 | Meeting Rooms II | meeting-rooms-ii | https://leetcode.com/problems/meeting-rooms-ii/ | --- | - | - | - | untouched |
 | 57 | 392 | Is Subsequence | is-subsequence | https://leetcode.com/problems/is-subsequence/ | --- | - | - | - | untouched |
 | 58 | 31 | Next Permutation | next-permutation | https://leetcode.com/problems/next-permutation/ | --- | - | - | - | untouched |
