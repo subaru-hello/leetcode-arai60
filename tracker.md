@@ -118,7 +118,7 @@
 |---|---|---|---|---|---|---|---|---|---|
 | 54 | 283 | Move Zeroes | move-zeroes | https://leetcode.com/problems/move-zeroes/ | ○○○ | 2026-08-20 | 1 | - | mastered |
 | 55 | 252 | Meeting Rooms | meeting-rooms | https://leetcode.com/problems/meeting-rooms/ | ○○○ | 2026-08-20 | 1 | - | mastered |
-| 56 | 253 | Meeting Rooms II | meeting-rooms-ii | https://leetcode.com/problems/meeting-rooms-ii/ | --- | - | - | - | untouched |
+| 56 | 253 | Meeting Rooms II | meeting-rooms-ii | https://leetcode.com/problems/meeting-rooms-ii/ | ○(例外) | 2026-08-23 | 5 | - | mastered |
 | 57 | 392 | Is Subsequence | is-subsequence | https://leetcode.com/problems/is-subsequence/ | --- | - | - | - | untouched |
 | 58 | 31 | Next Permutation | next-permutation | https://leetcode.com/problems/next-permutation/ | --- | - | - | - | untouched |
 | 59 | 8 | String to Integer (atoi) | string-to-integer-atoi | https://leetcode.com/problems/string-to-integer-atoi/ | --- | - | - | - | untouched |
